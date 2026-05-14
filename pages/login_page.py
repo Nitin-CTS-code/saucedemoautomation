@@ -1,10 +1,12 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from data.testdata import TestData
 
 class loginPage(BasePage):
     # url = "https//www.google.com"
     def load(self):
-        self.driver.get("https://www.saucedemo.com/")
+        # self.driver.get("https://www.saucedemo.com/")
+        self.driver.get(TestData.base_url)
 
     #locaters
     USERNAME = (By.ID, "user-name")
