@@ -15,4 +15,7 @@ class TestData:
         "password": "wrong_pass"
     }
 
-print(TestData.invalid_creds)
+    locked_cred = {
+        "username": "locked_out_user",
+        "password": "secret_sauce"
+    }
