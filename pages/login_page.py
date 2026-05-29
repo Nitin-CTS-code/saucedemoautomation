@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from data.testdata import TestData
 
-class LoginPage(BasePage):
+class loginPage(BasePage):
     # url = "https//www.google.com"
     def load(self):
         # self.driver.get("https://www.saucedemo.com/")

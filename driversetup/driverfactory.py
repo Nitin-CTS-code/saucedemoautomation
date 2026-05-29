@@ -6,7 +6,8 @@ class DriverFactory:
     def get_driver(browser_name):
         if browser_name.lower() == 'chrome':
             options = webdriver.ChromeOptions()
-            options.add_argument("--start-maximized")
+            # options.add_argument("--start-maximized")
+            options.add_argument("--headless")
             return webdriver.Chrome(options=options)
 
         elif browser_name.lower() == 'firefox':
