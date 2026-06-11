@@ -1,15 +1,8 @@
 import pytest
 from pages import login_page
 from pages.login_page import loginPage
-from driversetup.driverfactory import DriverFactory
+# from driversetup.driverfactory import DriverFactory
 from data.testdata import TestData
-
-
-@pytest.fixture
-def driver():
-    driver = DriverFactory.get_driver("chrome")
-    yield driver
-    driver.quit()
 
 
 def test_valid_login(driver):
