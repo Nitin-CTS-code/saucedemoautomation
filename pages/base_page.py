@@ -16,6 +16,11 @@ class BasePage:
             EC.visibility_of_element_located(locator)
         )
     
+    def findAll(self, locator):
+        return self.wait.until(
+            EC.visibility_of_all_elements_located(locator)
+        )
+
     def enter_text(self,locator,text):
         element = self.find(locator)
         element.clear()
@@ -34,4 +39,17 @@ class BasePage:
     
     def isVisible(self,locator):
         element = self.find(locator)
-        return element.is_displayed() 
+        return element.is_displayed()
+
+    # def isVisibleAlll(self,locator):
+    #     element = self.findAll(locator)
+    #     return element.is_displayed() 
+    
+    def isVisibleAll(self, locator):
+        elements = self.findAll(locator)
+
+        for element in elements:
+                if not element.is_displayed():
+                    return False
+
+        return True
